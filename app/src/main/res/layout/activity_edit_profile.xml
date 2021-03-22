@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile"
+    android:background="@drawable/background">
+
+
+    <TextView
+        android:id="@+id/TvVotreProfil"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/kavoon"
+        android:paddingLeft="20dp"
+        android:paddingTop="40dp"
+
+        android:textColor="@color/black"
+        android:textSize="45dp"
+
+        android:text="Your profil," />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="160dp"
+        android:id="@+id/LlNom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TvVotreProfil"
+        android:background="@drawable/button1">
+
+        <TextView
+            android:drawableLeft="@drawable/user"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:id="@+id/TvNom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name:" />
+
+        <EditText
+            android:id="@+id/EtNomDapresBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="24dp"
+
+        android:id="@+id/LlPrenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/LlNom"
+        android:background="@drawable/button1">
+        <TextView
+            android:drawableLeft="@drawable/user"
+
+            android:drawablePadding="10dp"
+
+            android:paddingLeft="10dp"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+
+            android:id="@+id/Tvprenom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second Name:" />
+
+        <EditText
+            android:lines="1"
+            android:id="@+id/EtPrenomDapresLaBase"
+            android:paddingRight="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button1"
+        android:id="@+id/LlAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/LlPrenom">
+        <TextView
+            android:drawableLeft="@drawable/age"
+
+            android:drawablePadding="10dp"
+
+            android:paddingLeft="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:id="@+id/TvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/age" />
+
+        <EditText
+            android:id="@+id/EtAgeDapresLaBase"
+            android:paddingRight="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="24dp"
+        android:gravity="center"
+        android:background="@drawable/button1"
+        android:id="@+id/LlAdresse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/LlAge">
+        <TextView
+
+            android:drawablePadding="10dp"
+
+            android:paddingLeft="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/mail"
+            android:id="@+id/TvAdresse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:" />
+        <EditText
+            android:id="@+id/EtAdresseDapresLaBase"
+            android:lines="1"
+            android:paddingRight="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="24dp"
+        android:gravity="center"
+        android:background="@drawable/button1"
+        android:id="@+id/LlMotDePasse"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LlAdresse">
+
+        <TextView
+
+            android:drawablePadding="5dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/password"
+            android:id="@+id/TvMotDePasse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click here to change password"
+            android:onClick="changePassword"
+            android:clickable="true"/>
+
+
+
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/BtnModifier"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LlMotDePasse"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button1"
+        android:backgroundTint="@color/yellow"
+        android:text="Save"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:icon="@android:drawable/ic_menu_save" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

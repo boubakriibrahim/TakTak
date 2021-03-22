@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/button">
+
+        <TextView
+            android:id="@+id/text_Space_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Space Name"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:fontFamily="@font/kavoon">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/image_View"
+            android:layout_width="220dp"
+            android:layout_height="150dp"
+            android:src="@drawable/placepic">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/text_Space_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:gravity="center_vertical">
+
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/text_Space_Sector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type Sector"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:gravity="center_vertical">
+
+
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

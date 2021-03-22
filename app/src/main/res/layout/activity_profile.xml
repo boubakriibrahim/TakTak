@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:background="@drawable/background">
+
+
+    <TextView
+        android:id="@+id/TvVotreProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/kavoon"
+        android:paddingLeft="20dp"
+        android:paddingTop="40dp"
+
+        android:textColor="@color/black"
+        android:textSize="45dp"
+
+        android:text="Your profil," />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="24dp"
+
+        android:layout_marginTop="180dp"
+
+        android:background="@drawable/button1"
+        android:id="@+id/LlNom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TvVotreProfil">
+
+        <TextView
+
+            android:drawablePadding="10dp"
+
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:id="@+id/TvNom"
+            android:drawableLeft="@drawable/user"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name:" />
+
+
+
+        <TextView
+            android:id="@+id/TvNomDapresBase"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginHorizontal="24dp"
+        android:gravity="center_vertical"
+
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button1"
+        android:id="@+id/LlPrenom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LlNom">
+
+        <TextView
+            android:drawablePadding="10dp"
+
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/user"
+
+            android:id="@+id/TvPrenom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second Name:" />
+
+
+
+        <TextView
+            android:id="@+id/TvPrenomDapresLaBase"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="24dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/button1"
+        android:id="@+id/LlAge"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LlPrenom">
+
+
+
+        <TextView
+            android:drawableLeft="@drawable/age"
+            android:drawablePadding="10dp"
+
+            android:paddingLeft="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:id="@+id/TvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/age" />
+
+
+        <TextView
+            android:id="@+id/TvAgeDapresLaBase"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginHorizontal="24dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button1"
+        android:id="@+id/LlAdresse"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LlAge">
+        <TextView
+            android:drawablePadding="10dp"
+
+            android:paddingLeft="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/mail"
+            android:id="@+id/TvAdresse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:" />
+        <TextView
+            android:id="@+id/TvAdresseDapresLaBase"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/BtnModifier"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button1"
+        android:backgroundTint="@color/yellow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:textColor="@color/black"
+        android:text="Change credentials"
+        android:textSize="18sp"
+        android:layout_below="@+id/LlAdresse"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:icon ="@android:drawable/ic_menu_edit"
+        />
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+

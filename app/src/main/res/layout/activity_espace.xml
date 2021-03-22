@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Espace"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:id="@+id/cred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/TvVotreProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kavoon"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:text="Place credentials," />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/donner"
+        android:layout_below="@id/cred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="40dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+
+            android:id="@+id/spaceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Space Name"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:fontFamily="@font/kavoon"
+            android:layout_gravity="center">
+
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/spaceImage"
+                android:layout_width="220dp"
+                android:layout_height="150dp"
+                android:src="@drawable/placepic">
+
+            </ImageView>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/spaceDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/kavoon"
+            android:gravity="center_vertical">
+
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/spaceSector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type Sector"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:fontFamily="@font/kavoon"
+            android:gravity="center_vertical">
+
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/spaceLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button1"
+            android:fontFamily="@font/kavoon"
+            android:gravity="center_vertical"
+            android:onClick="getLocation"
+            android:paddingHorizontal="10dp"
+            android:text="Click here to see his location"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_gravity="center">
+
+
+        </TextView>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/switching"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/donner"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Favorite"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/almendra_sc">
+
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/switcher"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/checkbox"
+            android:button="@color/green"
+            android:onClick="onCheckboxClicked"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/switching"
+        android:gravity="center_horizontal">
+
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5">
+        </RatingBar>
+
+        <Button
+            android:id="@+id/ratingBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="@color/black"
+            android:background="@drawable/button">
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+
+        <View
+            android:layout_width="90dp"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp">
+
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/customRatingBar"
+            android:text="Contact Us"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:textColor="@color/white">
+
+
+        </TextView>
+
+        <View
+            android:layout_width="90dp"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp">
+
+        </View>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/contact"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/fb"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/fb"
+            android:onClick="fbClick"/>
+
+        <ImageView
+            android:id="@+id/insta"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/instagram"
+            android:onClick="instaClick"/>
+
+        <ImageView
+            android:id="@+id/linkedin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/linkedin"
+            android:onClick="linkedIn"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
