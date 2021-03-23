@@ -1,12 +1,13 @@
 package com.are.taktak;
 
+import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -14,13 +15,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.Objects;
 
 public class FavoriteSpaces extends AppCompatActivity {
-
-    private DatabaseReference reference,reference2;
 
     RecyclerView recyclerSpaces;
     final ArrayList<Space> spacesList = new ArrayList<>();
@@ -36,21 +33,18 @@ public class FavoriteSpaces extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
         recyclerSpaces.setLayoutManager(layoutManager);
 
-        //List<String> strings = new ArrayList<>();
-
-        reference = FirebaseDatabase.getInstance().getReference("Spaces");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Spaces");
 
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                //int cpt=1;
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                spacesList.clear();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+
                     Space space = new Space();
-                    space.setSpaceName("nom");
-                    String string = snapshot.getValue().toString();
-                    System.out.println(string);
+                    String string = Objects.requireNonNull(snapshot.getValue()).toString();
+                    //System.out.println(string);
                     string = string.substring(1,string.length()-1);
                     String[] listStrings = string.split(",");
 
@@ -71,15 +65,24 @@ public class FavoriteSpaces extends AppCompatActivity {
                             space.setIsFavorite(listStrings[3]);
                         }
                     }
-                    spacesList.add(space);
+                    System.out.println(listStrings[3]);
+                    if (listStrings[3].equals("true")){
+                        spacesList.add(space);}
+
+
                     recyclerSpaces.setAdapter(new SpaceAdapter(spacesList));
                 }
-
+                if (spacesList.isEmpty()){
+                    Space space = new Space();
+                    space.setSpaceDescription("You haven't selected any place yet.");
+                    space.setSpaceSector("To select your places just click the star icon located next to each place.");
+                    spacesList.add(space);
+                }
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(FavoriteSpaces.this,"Something wrong happened!",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -136,7 +139,6 @@ public class FavoriteSpaces extends AppCompatActivity {
             s.setSpaceSector("Space Sector "+i);
             spacesList.add(s);
         }*/
-
 
     }
 }

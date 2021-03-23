@@ -19,4 +19,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="select">To select your places just click the star icon located next to each place.</string>
+    <string name="noselected">You haven\'t selected any place yet.</string>
+    <string name="space_name">Space Name</string>
+    <string name="place_image">place image</string>
+    <string name="favorite_spaces">Favorite Spaces</string>
 </resources>

@@ -3,40 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp">
+    android:layout_margin="5dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp"
+    android:background="@drawable/backgroundcard">
 
     <LinearLayout
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        android:background="@drawable/button">
+        android:gravity="center">
 
         <TextView
             android:id="@+id/text_Space_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Space Name"
+            android:text="@string/space_name"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
+            android:background="@drawable/backgroundcard"
             android:fontFamily="@font/kavoon">
         </TextView>
 
         <ImageView
             android:id="@+id/image_View"
-            android:layout_width="220dp"
-            android:layout_height="150dp"
-            android:src="@drawable/placepic">
+            android:layout_width="200dp"
+            android:contentDescription="@string/place_image"
+            android:layout_height="130dp"
+            android:src="@drawable/emptystar">
         </ImageView>
 
         <TextView
             android:id="@+id/text_Space_Description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description"
+            android:text="@string/noselected"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:gravity="center_vertical">
 
 
@@ -47,10 +51,10 @@
             android:id="@+id/text_Space_Sector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Type Sector"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:gravity="center_vertical">
+            android:text="@string/select"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:textAlignment="center">
 
 
         </TextView>
