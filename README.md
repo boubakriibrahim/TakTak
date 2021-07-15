@@ -8,7 +8,7 @@ Taktak est un système développé dans le but de minimiser l’encombrement dan
 
 ## Vidéo de réalisation
 
-<iframe width="500" height="320" src="https://www.youtube.com/watch?v=dyVGSOqn-tE">
+https://www.youtube.com/watch?v=dyVGSOqn-tE
 
 ## Description
 
