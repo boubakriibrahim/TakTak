@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+     <RelativeLayout
+        android:id="@+id/sectorHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+      <TextView
+            android:id="@+id/texttaktak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="TakTak"
+            android:fontFamily="@font/chalkboy"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"/>
+       <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_below="@id/texttaktak"
+            android:background="@drawable/white_backgroud_rectangle"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+              <EditText
+                  android:id="@+id/search_here"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight = "1"
+                android:textSize="16sp"
+                android:background="@color/white"
+                  android:layout_marginLeft="10dp"
+                android:hint="Search Here!"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                  android:inputType="text"/>
+
+              <ImageView
+                  android:layout_height="45dp"
+                  android:layout_width="30dp"
+                  android:layout_alignParentRight="true"
+                  android:src="@drawable/ic_search_black"
+                  android:background="@drawable/search_background"
+                  app:tint="@color/black" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@id/alimentation"
+        android:layout_below="@id/sectorHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+           <LinearLayout
+            android:id="@+id/restaurantsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/background_images"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:padding="15dp"
+               android:clickable="true"
+            >
+
+            <ImageView
+                android:id="@+id/ImageRestau"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:clickable="false"
+                android:src="@drawable/rest2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Restaurants"
+                android:textSize="16sp"
+                android:fontFamily="@font/ango"
+                android:textColor="@color/black"
+                android:clickable="false"
+
+                />
+           </LinearLayout>
+            <LinearLayout
+                android:id="@+id/caféLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/background_images"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:padding="15dp"
+                android:layout_alignParentRight="true"
+                >
+
+                <ImageView
+                    android:id="@+id/ImageCafé"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/cafe3"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Cafés"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ango"
+                    android:textColor="@color/black"
+
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <ScrollView
+        android:layout_below="@+id/alimentation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/servicePubliquesLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/background_images"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:padding="15dp"
+                >
+
+                <ImageView
+                    android:id="@+id/ImageBanqueResto"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/servicespubliques1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Services Publiques"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ango"
+                    android:textColor="@color/black"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/servicesSanitairesLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/background_images"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:padding="15dp"
+                android:layout_alignParentRight="true"
+                >
+
+                <ImageView
+                    android:id="@+id/Hopitaux"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/servicessanitaires1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Services Sanitaires"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/ango"
+                    android:textColor="@color/black"
+
+                    />
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

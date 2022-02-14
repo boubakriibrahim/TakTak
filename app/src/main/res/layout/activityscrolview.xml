@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gris"
+
+    tools:context=".ScrollView">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+
+                    android:layout_margin="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/scroll"
+                    android:backgroundTint="@color/yellow"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:background="@drawable/nom_espace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:ellipsize="end"
+                            android:paddingVertical="100dp"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:textAlignment="gravity"
+                            android:text="Carrefour Market"/>
+                    </LinearLayout>
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/space1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_margin="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/scroll"
+                    android:backgroundTint="@color/yellow"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:background="@drawable/nom_espace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:textAlignment="gravity"
+                            android:text="Restaurant King"/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/space2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_margin="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/scroll"
+                    android:backgroundTint="@color/yellow"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:background="@drawable/nom_espace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:textAlignment="gravity"
+                            android:text="Mall of Tunis "/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/space3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+
+                    android:layout_margin="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/scroll"
+                    android:backgroundTint="@color/yellow"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:background="@drawable/nom_espace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:textAlignment="gravity"
+                            android:text="Poste Rapide de Ariana"/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/space4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

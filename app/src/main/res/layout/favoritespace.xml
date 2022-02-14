@@ -6,14 +6,16 @@
     android:layout_margin="5dp"
     app:cardCornerRadius="20dp"
     app:cardElevation="2dp"
-    android:background="@drawable/backgroundcard">
+    android:onClick="favoritePlace"
+    android:clickable="true">
 
     <LinearLayout
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="@drawable/backgroundcard">
 
         <TextView
             android:id="@+id/text_Space_Name"
@@ -30,12 +32,14 @@
             android:id="@+id/image_View"
             android:layout_width="200dp"
             android:contentDescription="@string/place_image"
+            android:layout_marginTop="10dp"
             android:layout_height="130dp"
             android:src="@drawable/emptystar">
         </ImageView>
 
         <TextView
             android:id="@+id/text_Space_Description"
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/noselected"
@@ -49,6 +53,7 @@
 
         <TextView
             android:id="@+id/text_Space_Sector"
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/select"

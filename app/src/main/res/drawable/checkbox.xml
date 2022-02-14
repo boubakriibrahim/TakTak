@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checked="true" android:state_focused="true"
+    <!--<item android:state_checked="true" android:state_focused="true"
         android:drawable="@drawable/switchonnew" />
     <item android:state_checked="false" android:state_focused="true"
         android:drawable="@drawable/switchoff" />
     <item android:state_checked="false"
         android:drawable="@drawable/switchoff" />
     <item android:state_checked="true"
-        android:drawable="@drawable/switchonnew" />
+        android:drawable="@drawable/switchonnew" />-->
+
+    <item android:state_checked="true" android:state_focused="true"
+        android:drawable="@drawable/filledstar" />
+    <item android:state_checked="false" android:state_focused="true"
+        android:drawable="@drawable/emptystar" />
+    <item android:state_checked="false"
+        android:drawable="@drawable/emptystar" />
+    <item android:state_checked="true"
+        android:drawable="@drawable/filledstar" />
 </selector>

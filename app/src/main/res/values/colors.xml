@@ -6,8 +6,11 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="grey">#515151</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="JauneARE"> #E2AC0D </color>
+    <color name="JaunattreARE">#E1DBBD </color>
+    <color name="gris">#FCF6FF</color>
+    <color name="jaune">#FFC300 </color>
     <color name="green">#6fce34</color>
     <color name="Blue">#3023AE</color>
     <color name="Blue_dark">#303F9F</color>
@@ -18,4 +21,6 @@
     <color name="pink">#E153FF</color>
     <color name="are">#1D1C18</color>
     <color name="yellow">#FFE2AC0D</color>
+    <color name="grey">#979292</color>
+
 </resources>

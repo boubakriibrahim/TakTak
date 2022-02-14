@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/jaune"
+    android:id="@+id/main_toolbar"
+    >
+    <TextView
+        android:text="TAKTAK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/chalkboy"
+        android:id="@+id/Title_text">
+
+
+    </TextView>
+
+
+
+
+
+</androidx.appcompat.widget.Toolbar>
